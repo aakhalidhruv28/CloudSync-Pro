@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ topic }} — FAQ Chatbot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <header class="chat-header">
+      <div class="header-avatar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+      </div>
+      <div class="header-info">
+        <h1>{{ topic }} Assistant</h1>
+        <p class="header-status">
+          <span class="status-dot"></span>
+          Online — {{ description }}
+        </p>
+      </div>
+    </header>
+
+    <main class="chat-messages" id="chatMessages" aria-live="polite">
+      <div class="message bot">
+        <div class="message-avatar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+            <line x1="9" y1="9" x2="9.01" y2="9"/>
+            <line x1="15" y1="9" x2="15.01" y2="9"/>
+          </svg>
+        </div>
+        <div class="message-content">
+          <p>Hi! I'm the {{ topic }} FAQ assistant. Ask me anything about our product — pricing, security, file sharing, and more.</p>
+          <div class="suggestions-block" id="welcomeSuggestions">
+            <p class="suggestions-label">Popular questions</p>
+            <div class="suggestions" id="suggestions"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="chat-input-area">
+      <div class="quick-actions" id="quickActions">
+        <div class="category-filters" id="categoryFilters"></div>
+        <button type="button" class="refresh-suggestions-btn" id="refreshSuggestionsBtn" title="Refresh suggestions">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M23 4v6h-6"/><path d="M1 20v-6h6"/>
+            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+          </svg>
+          <span>New ideas</span>
+        </button>
+      </div>
+
+      <div class="sticky-suggestions" id="stickySuggestions">
+        <p class="suggestions-label" id="stickyLabel">Try asking</p>
+        <div class="suggestions" id="stickySuggestionChips"></div>
+      </div>
+
+      <form id="chatForm" class="chat-form" autocomplete="off">
+        <div class="input-wrapper">
+          <div class="placeholder-ghost" id="placeholderGhost" aria-hidden="true"></div>
+          <input
+            type="text"
+            id="messageInput"
+            placeholder=""
+            aria-label="Your question"
+            aria-autocomplete="list"
+            aria-controls="autocompleteList"
+            aria-expanded="false"
+            maxlength="500"
+            required
+          >
+          <ul class="autocomplete-list" id="autocompleteList" role="listbox" hidden></ul>
+        </div>
+        <button type="submit" id="sendBtn" aria-label="Send message">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+          </svg>
+        </button>
+      </form>
+      <p class="input-hint">Type to search · Tab or ↑↓ to pick a suggestion</p>
+    </footer>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>

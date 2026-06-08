@@ -1,0 +1,78 @@
+{
+  "topic": "CloudSync Pro",
+  "description": "A cloud storage and file synchronization product",
+  "faqs": [
+    {
+      "id": 1,
+      "question": "What is CloudSync Pro?",
+      "category": "General",
+      "answer": "CloudSync Pro is a cloud storage and file synchronization service that lets you store, access, and share files securely from any device. It offers automatic backup, real-time sync, and collaboration tools for teams."
+    },
+    {
+      "id": 2,
+      "question": "How much does CloudSync Pro cost?",
+      "category": "Pricing",
+      "answer": "CloudSync Pro offers three plans: Free (5 GB), Pro ($9.99/month for 100 GB), and Business ($19.99/month per user for 1 TB with team features). Annual billing saves 20%."
+    },
+    {
+      "id": 3,
+      "question": "How do I reset my password?",
+      "category": "Account",
+      "answer": "Go to the login page and click 'Forgot Password'. Enter your registered email address and we'll send a reset link valid for 24 hours. If you don't receive the email, check your spam folder or contact support."
+    },
+    {
+      "id": 4,
+      "question": "What file types are supported?",
+      "category": "Features",
+      "answer": "CloudSync Pro supports all common file types including documents (PDF, DOCX, XLSX), images (JPG, PNG, GIF, SVG), videos (MP4, MOV), audio files, and code files. Maximum file size is 5 GB on Pro and 10 GB on Business plans."
+    },
+    {
+      "id": 5,
+      "question": "Is my data secure?",
+      "category": "Security",
+      "answer": "Yes. All files are encrypted in transit (TLS 1.3) and at rest (AES-256). We use two-factor authentication, SOC 2 Type II compliance, and regular third-party security audits. Your data is stored in geographically redundant data centers."
+    },
+    {
+      "id": 6,
+      "question": "How do I share files with others?",
+      "category": "Features",
+      "answer": "Right-click any file or folder and select 'Share'. You can generate a link with view-only or edit permissions, set an expiration date, and add a password. For team folders, invite members by email with specific role-based access."
+    },
+    {
+      "id": 7,
+      "question": "Can I use CloudSync Pro offline?",
+      "category": "Features",
+      "answer": "Yes. Files marked for offline access are cached locally on your device. Changes made offline sync automatically when you reconnect. The desktop and mobile apps support full offline mode for recently accessed files."
+    },
+    {
+      "id": 8,
+      "question": "How do I cancel my subscription?",
+      "category": "Billing",
+      "answer": "Go to Account Settings > Billing > Cancel Subscription. Your plan remains active until the end of the billing period. After cancellation, your account reverts to the Free plan. Your files are retained for 30 days before downgrade limits apply."
+    },
+    {
+      "id": 9,
+      "question": "What platforms are supported?",
+      "category": "General",
+      "answer": "CloudSync Pro is available on Windows, macOS, Linux, iOS, and Android. We also offer a web app accessible from any modern browser. All platforms sync seamlessly in real time."
+    },
+    {
+      "id": 10,
+      "question": "How do I contact customer support?",
+      "category": "Support",
+      "answer": "Reach us via live chat (available 24/7 on our website), email at support@cloudsyncpro.com, or call 1-800-CLOUD-HELP. Pro users get priority support with response times under 2 hours. Business users have a dedicated account manager."
+    },
+    {
+      "id": 11,
+      "question": "How do I upgrade my storage plan?",
+      "category": "Billing",
+      "answer": "Navigate to Account Settings > Billing > Change Plan. Select your desired plan and confirm payment. Upgrades take effect immediately and you'll be charged a prorated amount for the remainder of your billing cycle."
+    },
+    {
+      "id": 12,
+      "question": "What happens if I exceed my storage limit?",
+      "category": "Billing",
+      "answer": "You'll receive email notifications at 80% and 95% capacity. Once you reach 100%, you can view and download files but cannot upload new ones until you free up space or upgrade your plan."
+    }
+  ]
+}
